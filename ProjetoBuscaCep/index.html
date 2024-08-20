@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Qual o endereço?</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Busca CEP v2</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Digite o cep para descobrir o endereço completo.</h5>
+       
+        <div class="row">
+
+          <form class="col s12">
+            <div class="row center">
+              <div class="col s12 m4 l2"><p></p></div>
+              <div class="input-field col s12 m4 l8 ">
+                <i class="material-icons prefix">location_on</i>
+                <input id="cep" type="text" name="cep" pattern="[0-9]{8}" required class="validate">
+                <label for="last_name">Seu CEP</label>
+              </div>
+
+              <div class="row center col s12">
+                <a  id="download-button" class="waves-effect waves-light btn orange" onclick="validarCEP()">Buscar</a>
+                <a  id="download-button" class="waves-effect waves-light btn orange" onclick="limparDados()">Limpar</a>
+              </div>
+
+            </div>
+          </form>
+        </div>
+          
+
+        <div id="endereco" class="row center">
+          <div class="col s12">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Resultado</span>
+                <p>Logradouro: <span id="logradouro"></span></p>
+                <p>Bairro: <span id="bairro"></span></p>
+                <p>Cidade: <span id="cidade"></span></p>
+                <p>Estado: <span id="estado"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+      </div>
+      
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row s12">
+        <div class="col">
+          <h6 class="white-text">Descrição da Aplicação</h6>
+          <p class="grey-text text-lighten-4">Esta aplicação utiliza o WebService ViaCep para recuperar os endereços dos ceps digitadoes pelos usuários. O design é um template Materialize.Esta publicado no GitHub (https://github.com/brunomalhano/BuscaCepNuvem)</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="js/utils.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

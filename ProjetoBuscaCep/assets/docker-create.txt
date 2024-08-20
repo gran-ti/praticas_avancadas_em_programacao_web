@@ -1,0 +1,14 @@
+
+Crie um arquivo Dockerfile que especifique as dependências necessárias 
+para executar a aplicação. Você pode usar uma imagem base do Nginx e 
+copiar os arquivos da aplicação para o 
+diretório /usr/share/nginx/html. 
+
+O arquivo Dockerfile pode ter o seguinte conteúdo:
+
+FROM nginx
+COPY . /usr/share/nginx/html
+
+docker build -t buscacep .
+
+docker run -p 8080:80 buscacep

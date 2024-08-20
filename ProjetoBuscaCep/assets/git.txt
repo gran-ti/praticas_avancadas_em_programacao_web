@@ -1,0 +1,14 @@
+Inicialize o repositório Git 
+com o comando git init.
+
+Adicione os arquivos do seu
+ projeto ao repositório local 
+ com o comando git add ..
+
+Faça o commit das alterações no repositório local com o comando git commit -m "mensagem do commit".
+
+Adicione o repositório remoto do GitHub com o comando git remote add origin <url_do_repositório>.
+
+Faça o push das alterações para o repositório remoto no GitHub com o comando git push -u origin master.
+
+Lembre-se de substituir <url_do_repositório> pela URL do repositório que você criou no GitHub.
